@@ -5,6 +5,16 @@
   </div>
   <router-view/>
 </template>
+<script>
+import {provide} from 'vue';
+import store from '@/store';
+
+export default {
+  setup(){
+    provide('store', store) //muestra el store en todos los hijos para que lo puedan inyectar
+  }
+}
+</script>
 
 <style>
 #app {
